@@ -90,6 +90,9 @@ DATABASES = {
     }
 }
 
+default_database = os.environ.get('DJANGO_DATABASE', 'default')
+DATABASES['default'] = DATABASES[default_database]
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

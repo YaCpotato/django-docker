@@ -4,6 +4,7 @@
 docker-compose up
 docker exec -it django-docker_web_1 bash
 python manage.py migrate
+python manage.py createsuperuser
 ```
 
 ## データベースのマイグレーション

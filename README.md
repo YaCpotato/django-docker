@@ -7,11 +7,12 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
-## データベースのマイグレーション
-### コンテナ環境
-postgreSQL
-### ローカル環境
-sqlite3
+## admin画面にアクセス
 ```
-python manage.py migrate --database sqlite3
+http://localhost:8000/admin
+```
+
+## djangorestframework疎通チェック
+```
+curl -X GET http://127.0.0.1:8000/api/tasks/ | jq .
 ```

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import PrelineScript from "@/components/PrelineScript";
 
 import { Header } from "@/components/Header";
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         <Header />
         {children}
       </body>
+      <PrelineScript />
     </html>
   )
 }

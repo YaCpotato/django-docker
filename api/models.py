@@ -13,7 +13,7 @@ class Task(models.Model):
     )
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=255)
-    discription = models.TextField()
+    description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     status = models.CharField(choices=STATUS_SET, default=STATUS_DRAFT, max_length=8)

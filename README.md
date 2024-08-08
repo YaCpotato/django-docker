@@ -2,9 +2,24 @@
 ## 起動
 ```
 docker-compose up
-docker exec -it django-docker_web_1 bash
+
+Cmd + Tで同タブで別ターミナルを開く
+docker exec -it django-docker-nextjs-web-1 bash
 python manage.py migrate
 python manage.py createsuperuser
+```
+
+## Seed
+```
+docker exec -it django-docker-nextjs-web-1 bash
+python manage.py loaddata api/fixtures/user_and_tasks.yaml 
+```
+
+## Next.js 起動
+```
+Cmd + Tで同タブで別ターミナルを開く
+nvm use
+npm install
 ```
 
 ## admin画面にアクセス
